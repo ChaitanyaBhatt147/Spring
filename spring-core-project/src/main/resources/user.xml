@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean using getter and setter -->
+	<bean id="user" class="in.co.rays.test.User">
+	<property name="name" value="Ram"></property>	<!--set name as ram  -->
+	<property name="address" value="Indore"></property> <!--set address as Indore  -->
+	</bean>
+
+	<bean id="user1" class="in.co.rays.test.User">
+	<property name="name" value="Shyam"></property>
+	<property name="address" value="Bhopal"></property>
+	</bean>
+	<!-- bean using constructor -->
+	<bean id="user2" class="in.co.rays.test.User">
+	<constructor-arg value="Chaitanya"></constructor-arg>
+	<constructor-arg value="Udaipur"></constructor-arg>
+	</bean>
+	
+</beans>
