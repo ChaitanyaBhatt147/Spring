@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean using getter and setter -->
+	<bean id="person" class="in.co.rays.test.Person">
+	<property name="name" value="Ram"></property>	<!--set name as Ram  -->
+	<property name="login" value="ram@gmail.com"></property> <!--set login as ram@gmail.com  -->
+	<property name="password" value="ram@1234"></property> <!--set password as ram@1234  -->
+	</bean>
+
+	<bean id="person1" class="in.co.rays.test.Person">
+	<property name="name" value="Shyam"></property>	<!--set name as Shyam  -->
+	<property name="login" value="shyam@gmail.com"></property> <!--set login as shyam@gmail.com -->
+	<property name="password" value="shyam@1234"></property> <!--set password as shyam@1234-->
+	</bean>
+	<!-- bean using constructor -->
+	<bean id="person2" class="in.co.rays.test.Person">
+	<constructor-arg value="Chaitanya"></constructor-arg>
+	<constructor-arg value="chaitanya@gmail.com"></constructor-arg>
+	<constructor-arg value="Chaitanya@123"></constructor-arg>
+	</bean>
+	
+</beans>
