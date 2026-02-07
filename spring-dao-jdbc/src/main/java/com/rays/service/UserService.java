@@ -20,4 +20,14 @@ public class UserService {
 		return pk;
 	}
 
+	@Transactional(propagation = Propagation.REQUIRED)
+	public void delete(int id) {
+		dao.delete(id);
+	}
+
+	@Transactional(propagation = Propagation.REQUIRED)
+	public void update(UserDTO dto) {
+		dao.update(dto);
+	}
+
 }

@@ -36,4 +36,14 @@ public class UserDAOJDBCImpl implements UserDAOInt {
 		return i;
 	}
 
+	public void delete(int id) {
+		String sql = "delete from st_user where id = ?";
+		jdbcTemplate.update(sql, id);
+	}
+
+	public void update(UserDTO dto) {
+		String sql = "update st_user set first_name = ?, last_name = ?, login = ?, password = ? where id = ?";
+		jdbcTemplate.update(sql, dto.getFirstName(), dto.getLastName(), dto.getLogin(), dto.getPassword(), dto.getId());
+	}
+
 }

@@ -7,5 +7,9 @@ public interface UserDAOInt {
 	public long nextPk();
 
 	public long add(UserDTO dto);
+	
+	public void delete(int id);
+	
+	public void update(UserDTO dto);
 
 }
